@@ -23,7 +23,7 @@ class Url(Resource):
                 client_secret="gaFXaVGpKEMwdPgvBl0wQWbaOBG5zA",
                 user_agent="DeptAPI",
             )
-            submissions = reddit.subreddit(r).hot(limit=5)
+            submissions = reddit.subreddit(r).top(limit=5)
             for s in submissions:
                 return_list.append(s.title)
         except Exception as e:
